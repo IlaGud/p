@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: rgb(11, 2, 2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;     
+    }
+
+    .heart {
+      width: 300px;
+      height: 300px;
+      position: relative;
+      animation: slideIn 20s forwards;
+      animation: wink 10s infinite;
+      background-size: cover;animation: slideIn 7s forwards; 
+      background-position: center; 
+    }
+
+    .heart:after,
+    .heart:before {    
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 160px;
+      height: 240px;
+      border-radius: 180px 150px 0 0;
+      background-color: #f4fc00;
+
+    }
+
+    .heart:before {
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
+      box-shadow: 6px 1px 500000px #dbff5a;
+
+    }
+
+    .heart:after {
+      left: -160px;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+
+    }
+
+    .DR {
+      color: #00f7ff;
+      text-align: center;
+      margin-top: 20px;
+
+      opacity: 0;
+      animation: fadeIn 5s forwards;
+      box-shadow: 0px 0px 5000000px #00f2ff;
+      
+    }
+.i{
+    box-shadow: 0px 0px 5000000px #ff0000;
+}
+    
+
+    @keyframes slideIn {
+      0% {
+        left: -100%;
+      }
+      100% {
+        left: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+
+}
+
+    @keyframes wink {
+      0%,
+      100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(0.8);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="heart"></div>
+  <h1 class="DR">С днем рождения, Жмыхова Полина!</h1>
+<div class="i">  _</div>
+</body>
+</html>
